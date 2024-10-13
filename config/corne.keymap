@@ -23,10 +23,10 @@
 
         layer_0 {
             bindings = <
-&kp ESC     &kp B  &kp Y           &kp O               &kp U             &kp APOS     &kp UNDERSCORE  &kp L              &kp D                &kp W            &kp V  &trans
-&kp TAB     &kp C  &mt LEFT_ALT I  &mt LEFT_CONTROL E  &mt LEFT_SHIFT A  &kp Z        &kp Q           &mt RIGHT_SHIFT H  &mt RIGHT_CONTROL T  &mt RIGHT_ALT S  &kp N  &trans
-&caps_word  &kp G  &kp X           &kp J               &kp K             &kp COMMA    &kp PERIOD      &kp R              &kp M                &kp F            &kp P  &trans
-                                   &kp LEFT_META       &lt 2 SPACE       &kp DEL      &kp BACKSPACE   &lt 1 RIGHT_META   &trans
+&kp ESC     &kp B  &kp Y           &kp O               &kp U             &kp APOS     &kp UNDERSCORE  &kp L              &kp D                &kp W            &kp V  &kp QUESTION
+&kp TAB     &kp C  &mt LEFT_ALT I  &mt LEFT_CONTROL E  &mt LEFT_SHIFT A  &kp Z        &kp Q           &mt RIGHT_SHIFT H  &mt RIGHT_CONTROL T  &mt RIGHT_ALT S  &kp N  &kp COLON
+&caps_word  &kp G  &kp X           &kp J               &kp K             &kp COMMA    &kp PERIOD      &kp R              &kp M                &kp F            &kp P  &kp EXCL
+                                   &kp LEFT_META       &lt 2 SPACE       &kp DEL      &kp BACKSPACE   &lt 1 ENTER        &trans
             >;
         };
 
