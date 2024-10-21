@@ -18,6 +18,15 @@
         };
     };
 
+    macros {
+        ControlX: ControlX {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(X)>;
+            label = "CONTROLX";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -26,7 +35,7 @@
 &kp ESC     &kp B  &kp Y           &kp O               &kp U             &kp APOS     &kp UNDERSCORE  &kp L              &kp D                &kp W            &kp V  &kp QUESTION
 &kp TAB     &kp C  &mt LEFT_ALT I  &mt LEFT_CONTROL E  &mt LEFT_SHIFT A  &kp Z        &kp Q           &mt RIGHT_SHIFT H  &mt RIGHT_CONTROL T  &mt RIGHT_ALT S  &kp N  &kp COLON
 &caps_word  &kp G  &kp X           &kp J               &kp K             &kp COMMA    &kp PERIOD      &kp R              &kp M                &kp F            &kp P  &kp EXCL
-                                   &kp LEFT_META       &lt 2 SPACE       &kp DEL      &kp BACKSPACE   &lt 1 ENTER        &trans
+                                   &kp LEFT_META       &lt 2 SPACE       &kp DEL      &kp BACKSPACE   &lt 1 ENTER        &kp TAB
             >;
         };
 
@@ -41,10 +50,10 @@
 
         layer_2 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp HOME        &kp UP_ARROW    &kp END          &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans          &trans           &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans          &trans
+&trans  &trans  &trans     &trans     &trans     &trans    &trans  &kp HOME        &kp UP_ARROW    &kp END          &trans  &trans
+&trans  &trans  &trans     &trans     &trans     &trans    &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
+&trans  &trans  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans    &trans  &trans          &trans          &trans           &trans  &trans
+                           &trans     &trans     &trans    &trans  &trans          &trans
             >;
         };
     };
