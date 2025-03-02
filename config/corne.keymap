@@ -5,7 +5,9 @@
  */
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 
 / {
     combos {
@@ -15,6 +17,11 @@
             bindings = <&kp SEMICOLON>;
             key-positions = <29 30>;
             layers = <0>;
+        };
+
+        BT {
+            bindings = <&sl 3>;
+            key-positions = <37 40>;
         };
     };
 
@@ -50,10 +57,19 @@
 
         layer_2 {
             bindings = <
-&trans  &trans     &trans     &trans     &trans     &trans       &trans  &kp HOME        &kp UP_ARROW    &kp END          &kp PAGE_UP    &kp LC(Y)
-&trans  &trans     &trans     &trans     &trans     &trans       &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PAGE_DOWN  &kp LC(Z)
-&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(Y)    &trans  &trans          &trans          &trans           &trans         &trans
-                              &trans     &trans     &trans       &trans  &trans          &trans
+&bt BT_CLR_ALL  &bt BT_CLR  &trans     &trans     &mo 3      &trans       &trans  &kp HOME        &kp UP_ARROW    &kp END          &kp PAGE_UP    &kp LC(Y)
+&trans          &trans      &trans     &trans     &trans     &trans       &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PAGE_DOWN  &kp LC(Z)
+&trans          &kp LC(Z)   &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(Y)    &trans  &trans          &trans          &trans           &trans         &trans
+                                       &trans     &trans     &trans       &trans  &trans          &trans
+            >;
+        };
+
+        layer_3 {
+            bindings = <
+&trans  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4     &bt BT_CLR_ALL  &bt BT_CLR    &bt BT_NXT  &trans  &trans  &trans
+&trans  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4    &trans          &out OUT_TOG  &bt BT_PRV  &trans  &trans  &trans
+&trans  &trans         &trans         &trans         &trans         &trans           &trans          &trans        &trans      &trans  &trans  &trans
+                                      &trans         &trans         &trans           &trans          &trans        &trans
             >;
         };
     };
